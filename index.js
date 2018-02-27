@@ -10,7 +10,6 @@ var isLoggedIn = require('./middleware/isLoggedIn');
 var app = express();
 
 app.set('view engine', 'ejs');
-
 app.use(require('morgan')('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(ejsLayouts);
@@ -19,7 +18,7 @@ app.use(ejsLayouts);
 app.use(session({
   secret: process.env.SESSION_SECRET,
   resave: false, //save the session even if it was modified = NOPE
-  savUninitialized: true // if the session is new but it hasn't been saved, SAVE it = YEP
+  saveUninitialized: true // if the session is new but it hasn't been saved, SAVE it = YEP
 }));
 
 app.use(flash());
