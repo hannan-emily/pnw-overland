@@ -8,6 +8,7 @@ var passport = require('./config/ppConfig');
 var isLoggedIn = require('./middleware/isLoggedIn');
 var geocoder = require('geocoder');
 var app = express();
+var db = require('./models');
 
 app.set('view engine', 'ejs');
 app.use(require('morgan')('dev'));

@@ -1,10 +1,17 @@
+//RENDERING THE TRAIL MAP
 function initMap() {
-        var uluru = {lat: -25.363, lng: 131.044};
+        //this sets the location variable from two coordinates
+        var place = {lat: -25.363, lng: 131.044};
+
+        //this is setting the map to THIS new location, using the google maps method
+        //this calls the place variable (now as uluru)
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 4,
-          center: uluru
+          center: place
         });
 
+        //SETTING INFO INTO THE MARKER INFOWINDOW (DISPLAYS ON CLICK EVENT)
+        //insert db.data.whatever into here
         var contentString = '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
@@ -26,15 +33,19 @@ function initMap() {
             '</div>'+
             '</div>';
 
+        //SETTING THE CONTENT INTO THE MARKER INFOWINDO
         var infowindow = new google.maps.InfoWindow({
           content: contentString
         });
 
+        //MARKERR IS TIED TO THE PLACE VARIABLE & THOSE COORDINATES (FOR NOW)
         var marker = new google.maps.Marker({
-          position: uluru,
+          position: place,
           map: map,
           title: 'Uluru (Ayers Rock)'
         });
+
+        //ON CLICK LISTENER FOR MARRKER TO CALL THE INFOWINDOW & CONTENT
         marker.addListener('click', function() {
           infowindow.open(map, marker);
         });
