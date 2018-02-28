@@ -6,13 +6,15 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 var passport = require('./config/ppConfig');
 var isLoggedIn = require('./middleware/isLoggedIn');
-
+var geocoder = require('geocoder');
 var app = express();
 
 app.set('view engine', 'ejs');
 app.use(require('morgan')('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(ejsLayouts);
+app.use(express.static(__dirname + '/public'));
+
 
 //session IS a function WITH an object THAT takes the stuff you want to store in this session
 app.use(session({
@@ -40,6 +42,27 @@ app.get('/', function(req, res) {
 
 app.get('/profile', isLoggedIn, function(req, res) {
   res.render('profile');
+});
+
+//DISPLAY ALL TRAILS ON ONE PAGE, AFTER THIS REQUEST
+app.get('/trails', function(req, res) {
+    db.place.findAll().then(function(places) {
+        res.render('trails/index', { places: places });
+    }).catch(function(err) {
+        res.send({ message: 'error', error: err });
+    });
+});
+
+//POST TO ALL TRAILS
+app.post('/trails', function(req, res) {
+    db.place.create({
+        name: req.body.name,
+        address: req.body.address
+    }).then(function(place) {
+        res.redirect('trails/index');
+    }).catch(function(err) {
+        res.send({ message: 'error', error: err });
+    });
 });
 
 app.use('/auth', require('./controllers/auth'));
