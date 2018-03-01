@@ -19,3 +19,10 @@
   padding: 0;
   margin: 0;
 }
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  color: #CCC;
+  font-size: 40px;
+}

@@ -90,7 +90,7 @@ function initMap() {
   });
 
   markerShovelCreek5km.addListener('click', function() {
-    document.getElementById('ytplayer').src = "https://www.youtube.com/embed/rN49Sxg23jQ?start=245&autoplay=1";
+    document.getElementById('ytplayer').src = "https://www.youtube.com/embed/rN49Sxg23jQ?rel=0&amp;showinfo=0&amp;start=248&mute=1&autoplay=1";
     infoShovelCreek5km.open(map, markerShovelCreek5km);
   });
 }
