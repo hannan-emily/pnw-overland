@@ -14,23 +14,27 @@ html {
 
 #map {
   height: 360px;
-  padding: 0;
-  margin: 0;
+  padding: 0px;
+  margin: 0px;
 }
 
 #video {
-  padding: 0;
-  margin: 0;
+  padding: 0px;
+  margin: 0px;
 }
 
 h1 {
   font-family: 'Oswald', sans-serif;
   font-weight: 700;
   font-size: 40px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 h2 {
   font-family: 'Oswald', sans-serif;
   font-weight: 300;
-  font-size: 28px;
+  font-size: 22px;
+  padding-top: 0px;
+  margin-top: 0px;
 }

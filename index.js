@@ -47,7 +47,11 @@ app.get('/profile', isLoggedIn, function(req, res) {
 
 //DISPLAY ALL TRAILS ON ONE PAGE, AFTER THIS REQUEST
 app.get('/trails', function(req, res) {
-  res.render('trails/index');
+    db.trail.findAll().then(function(trails) {
+        res.render('trails/index', { trail: trails });
+    }).catch(function(err) {
+        res.send({ message: 'error', error: err });
+    });
 });
 
 //DISPLAY ONE SPECIFIC TRAIL

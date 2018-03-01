@@ -132,9 +132,9 @@ function initMap() {
       '</p>'+
       '<a href="http://ihikebc.com/trips/2011/trip050ShovelCreekFSR.htm">2011 Guide</a>' +
       '</div>';
-
+      console.log(startLat, startLng);
   var markerShovelCreek5km = new google.maps.Marker({
-    position: {lat: 49.805572, lng: -121.792502},
+    position: {lat: startLat, lng: startLng},
     map: map,
     title: 'Shovel Creek 5km ALERT'
   });
