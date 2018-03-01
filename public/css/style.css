@@ -1,4 +1,5 @@
 
+
 #header {
   background-color: grey;
   height: 600px;
@@ -9,6 +10,12 @@
 }
 
 #map {
-  height: 600px;
-  width: 100%;
+  height: 360px;
+  padding: 0;
+  margin: 0;
+}
+
+#video {
+  padding: 0;
+  margin: 0;
 }
