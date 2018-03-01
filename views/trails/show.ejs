@@ -12,18 +12,22 @@
     <div id="videoheader" class="col s6 left-align trailtext">
       <h1><%= trail.title %></h1>
       <h2><%= trail.subtitle %></h2>
-      <div class="row trailtext">
-        <div class="col s6">
+      <div class="row">
+        <div class="col s6 trailtext">
             <p class="trailtextbold">Trail Start:</p>
             <p><%= trail.startLat %> lat , <%= trail.startLng %> lng </p>
         </div>
-        <div class="col s6">
+        <div class="col s6 trailtext">
             <p class="trailtextbold">Trail End:</p>
             <p><%= trail.endLat %> lat , <%= trail.endLng %> lng </p>
         </div>
+        <div class="col s6 trailtext">
+            <p class="trailtextbold">More tips & tricks on <%= trail.title %></p>
+            <a class="waves-effect waves-light btn" href="<%= trail.sourceURL %>" target="_blank">Read More</a>
+        </div>
         <div class="col s6">
-            <p class="trailtextbold">Alert:</p>
-            <p><%= trail.endLat %> lat , <%= trail.endLng %> lng </p>
+          <p class="trailtextbold">Add trail to your favorites!</p>
+          <a class="waves-effect waves-light btn"><i class="material-icons left">favorite</i>Favorite</a>
         </div>
       </div>
 
