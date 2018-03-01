@@ -47,24 +47,18 @@ app.get('/profile', isLoggedIn, function(req, res) {
 
 //DISPLAY ALL TRAILS ON ONE PAGE, AFTER THIS REQUEST
 app.get('/trails', function(req, res) {
-    db.place.findAll().then(function(places) {
-        res.render('trails/index', { places: places });
+  res.render('trails/index');
+});
+
+//DISPLAY ONE SPECIFIC TRAIL
+app.get('/trails/:id', function(req, res) {
+    db.trail.findById().then(function(trails) {
+        res.render('trails/show', { trails: trails });
     }).catch(function(err) {
         res.send({ message: 'error', error: err });
     });
 });
 
-//POST TO ALL TRAILS
-app.post('/trails', function(req, res) {
-    db.place.create({
-        name: req.body.name,
-        address: req.body.address
-    }).then(function(place) {
-        res.redirect('trails/index');
-    }).catch(function(err) {
-        res.send({ message: 'error', error: err });
-    });
-});
 
 app.use('/auth', require('./controllers/auth'));
 
