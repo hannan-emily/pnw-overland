@@ -1,3 +1,6 @@
+html {
+    font-family: 'News Cycle', sans-serif;
+}
 
 
 #header {
@@ -21,8 +24,13 @@
 }
 
 h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 900;
-  color: #CCC;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+h1 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
   font-size: 40px;
 }
