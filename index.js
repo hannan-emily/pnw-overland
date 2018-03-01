@@ -52,13 +52,12 @@ app.get('/trails', function(req, res) {
 
 //DISPLAY ONE SPECIFIC TRAIL
 app.get('/trails/:id', function(req, res) {
-    db.trail.findById().then(function(trails) {
-        res.render('trails/show', { trails: trails });
+    db.trail.findById(req.params.id).then(function(trails) {
+        res.render('trails/show', { trail: trails });
     }).catch(function(err) {
         res.send({ message: 'error', error: err });
     });
 });
-
 
 app.use('/auth', require('./controllers/auth'));
 
