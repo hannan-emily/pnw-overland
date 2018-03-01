@@ -109,21 +109,20 @@ function initMap() {
   console.log("in the initMap function");
   directionsService = new google.maps.DirectionsService();
   directionsDisplay = new google.maps.DirectionsRenderer();
-  start = new google.maps.LatLng(49.613955, -121.820801); //harrison hot springs
-  end = new google.maps.LatLng(49.863426, -121.442574); //boston bar
+  start = new google.maps.LatLng(startLat, startLng); //harrison hot springs
+  end = new google.maps.LatLng(endLat, endLng); //boston bar
 
   var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 14,
       center: start,
-      mapTypeId: 'satellite'
+      mapTypeId: 'satellite',
+      gestureHandling: 'cooperative' //this should in theory fix the zoom/scroll feature when we scroll down the page
     });
 
   directionsDisplay.setMap(map);
   calcRoute();
 
   //MARKERS IN HERE ///////
-
-
   var contentShovelCreek5km = '<div id="content">'+
       '<h5 id="firstHeading" class="firstHeading">Shovel Creek 5km ALERT</h5>'+
       '<div id="bodyContent">'+
@@ -132,9 +131,9 @@ function initMap() {
       '</p>'+
       '<a href="http://ihikebc.com/trips/2011/trip050ShovelCreekFSR.htm">2011 Guide</a>' +
       '</div>';
-      console.log(startLat, startLng);
+
   var markerShovelCreek5km = new google.maps.Marker({
-    position: {lat: startLat, lng: startLng},
+    position: {lat: 49.805572, lng: -121.792502},
     map: map,
     title: 'Shovel Creek 5km ALERT'
   });

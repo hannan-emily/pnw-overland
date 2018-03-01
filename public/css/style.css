@@ -38,3 +38,19 @@ h2 {
   padding-top: 0px;
   margin-top: 0px;
 }
+
+h3 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.trailtext p{
+   display: inline-block;
+   font-size: 18px;
+}
+
+.trailtextbold {
+  font-weight: bold;
+  font-size: 20px;
+}
