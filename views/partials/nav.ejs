@@ -2,22 +2,27 @@
     <div class="nav-wrapper container">
       <ul class="right hide-on-med-and-down">
         <% if (currentUser !== undefined) { %>
+          <li><a href="/">Home</a></li>
           <li><a href="/trails">Trails</a></li>
           <li><a href="/favorites">Favorites</a></li>
           <li><a href="/profile">Profile</a></li>
           <li><a href="/auth/logout">Logout</a></li>
       <%  } else { %>
+          <li><a href="/">Home</a></li>
           <li><a href="/trails">Trails</a></li>
           <li><a href="/auth/signup">Signup</a></li>
           <li><a href="/auth/login">Login</a></li>
       <%  } %>
-
-
-
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/trails">Trails</a></li>
+        <li><a href="/favorites">Favorites</a></li>
         <li><a href="/profile">Profile</a></li>
+        <li><a href="/auth/signup">Signup</a></li>
+        <li><a href="/auth/login">Login</a></li>
+        <li><a href="/auth/logout">Logout</a></li>
         <!-- Dropdown Trigger -->
         <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Login In<i class="material-icons right">arrow_drop_down</i></a></li>
       </ul>

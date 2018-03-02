@@ -40,7 +40,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   });
   user.associate = function(models) { //this is a class method
-    // associations can be defined here
+    models.user.hasMany(models.favoriteTrail);
   };
 
   //SEQUELIZE DOES NOT CALL THESE FUNCTIONS. WE CALL THESE FUNCTIONS LATER ON.

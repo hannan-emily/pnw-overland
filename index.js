@@ -63,19 +63,21 @@ app.get('/trails/:id', function(req, res) {
     });
 });
 
-app.get('/favorites',  isLoggedIn, function(req,res) {
-  res.render('favorites')
+app.get('/favorites', isLoggedIn, function(req,res) {
+  res.render('favorites/index');
 });
 
-// app.post('favorites/:title', isLoggedIn, function(req,res) {
-//   db.findOrCreate(
-//     where: {
-//       userId: req.user.id,
-//       title: req.params.title
-//     }).spread(function(something)) {
-//     res.render('favorites')
-//   }
-// });
+
+app.post('/favorites/:title', isLoggedIn, function(req,res) {
+    db.favoriteTrail.findOrCreate({
+    where:  {
+        userId: req.user.id,
+        title: req.params.title
+      }
+    }).spread(function(favorite) {
+        res.render('favorites/index');
+    });
+});
 
 app.use('/auth', require('./controllers/auth'));
 
