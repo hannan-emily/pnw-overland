@@ -99,6 +99,7 @@
 //////// TESTING THIS NEW SCRIPT TO ADD IN TRAIL INFO PROGRAMMATICALLY ////////////////////
 
 
+
 var directionsService = null;
 var directionsDisplay = null;
 var start = null;

@@ -10,15 +10,37 @@ $(document).ready(function() {
     })
   });
 
-  $('.edit').on('submit', function(e){
+  $('.edit').on('click', function(e){
+    console.log("hit here")
     e.preventDefault();
     $.ajax({
+
       url: $(this).attr('href'),
       method: 'PUT',
-      data:
-      {note: $("#note").val()}
+      data: {note: $("#note").val()}
     }).done(function(data){
-      window.location.href = '/favorite-trails';
+      console.log('you finished put route in ajax');
     });
   });
 });
+//
+// $('.put-form').on('submit', function(e) {
+//   e.preventDefault();
+//   var teamElement = $(this);
+//   var teamUrl = teamElement.attr('action');
+//   var teamData = teamElement.serialize();
+//   $.ajax({
+//     method: 'PUT',
+//     url: teamUrl,
+//     data: teamData
+//   }).done(function(data) {
+//     // get data returned from the PUT route
+//     console.log(data);
+//
+//     // do stuff when the PUT action is complete
+//     teamElement.remove();
+//
+//     // or, you can redirect to another page
+//     window.location = '/teams';
+//   });
+// });

@@ -24,13 +24,14 @@ router.get('/', isLoggedIn, function(req,res) {
   });
 });
 
+//updating the note content that is in this row of the user's favorite model
 router.put('/:id/note', isLoggedIn, function(req,res) {
-    console.log(req.body);
+    console.log('we hit the router put route');
     db.favoriteTrail.update({
       note: req.body.note
     }, {
     where:  {
-        id: req.params.id,
+      id: req.params.id
       }
     }).then(function(note) {
         // res.send(favorite);
