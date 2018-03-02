@@ -55,16 +55,16 @@ router.get('/logout', function(req, res) {
 
 
 
-//THIS IS THEIR FAVORITES - RIGHT NOW IT'S USING THE MODEL PLACES
-app.post('/places', function(req, res) {
-    db.place.create({
-        name: req.body.name,
-        address: req.body.address
-    }).then(function(place) {
-        res.redirect('/');
-    }).catch(function(err) {
-        res.send({ message: 'error', error: err });
-    });
-});
+// //THIS IS THEIR FAVORITES - RIGHT NOW IT'S USING THE MODEL PLACES
+// app.post('/places', function(req, res) {
+//     db.place.create({
+//         name: req.body.name,
+//         address: req.body.address
+//     }).then(function(place) {
+//         res.redirect('/');
+//     }).catch(function(err) {
+//         res.send({ message: 'error', error: err });
+//     });
+// });
 
 module.exports = router;

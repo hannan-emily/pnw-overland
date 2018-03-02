@@ -67,15 +67,15 @@ app.get('/favorites',  isLoggedIn, function(req,res) {
   res.render('favorites')
 });
 
-app.post('favorites/:title', isLoggedIn, function(req,res) {
-  db.findOrCreate(
-    where: {
-      userId: req.user.id,
-      title: req.params.title
-    }).spread(function(something)) {
-    res.render('favorites')
-  }
-});
+// app.post('favorites/:title', isLoggedIn, function(req,res) {
+//   db.findOrCreate(
+//     where: {
+//       userId: req.user.id,
+//       title: req.params.title
+//     }).spread(function(something)) {
+//     res.render('favorites')
+//   }
+// });
 
 app.use('/auth', require('./controllers/auth'));
 

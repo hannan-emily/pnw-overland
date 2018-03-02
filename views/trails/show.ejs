@@ -37,16 +37,21 @@
   </div>
 
 
-  <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeqZ3s_mO91ezV4tNt9zqBLnsDlwVS8Ts&callback=initMap">
-  </script>
+
   <script>
+  console.log('hit var lat lng');
     var startLat = parseFloat("<%= trail.startLat %>");
     var startLng = parseFloat("<%= trail.startLng %>");
     var endLat = parseFloat("<%= trail.endLat %>");
     var endLng = parseFloat("<%= trail.endLng %>");
   </script>
-  <script src="/js/script.js"></script>
 
+  <script src="/js/script.js">
+  console.log('calling script');
+  </script>
+  
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeqZ3s_mO91ezV4tNt9zqBLnsDlwVS8Ts&callback=initMap">
+  </script>
 
 </main>
