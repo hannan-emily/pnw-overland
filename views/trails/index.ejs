@@ -8,15 +8,11 @@
 
   <div class='row'>
     <div class="col s12">
-        <% trails.forEach(function(trail) { %>
-          <div class="well">
-            <%= trail.title %>
-          </div>
+        <% trail.forEach(function(trail) { %>
+          <a href="/trails/<%= trail.id %>"><%= trail.title %></a>
         <% }); %>
     </div>
   </div>
-
-
 
   <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeqZ3s_mO91ezV4tNt9zqBLnsDlwVS8Ts&callback=initMap">
