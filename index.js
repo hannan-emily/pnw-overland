@@ -45,41 +45,10 @@ app.get('/profile', isLoggedIn, function(req, res) {
   res.render('profile');
 });
 
-//DISPLAY ALL TRAILS ON ONE PAGE, AFTER THIS REQUEST
-app.get('/trails', function(req, res) {
-    db.trail.findAll().then(function(trails) {
-        res.render('trails/index', { trail: trails });
-    }).catch(function(err) {
-        res.send({ message: 'error', error: err });
-    });
-});
-
-//DISPLAY ONE SPECIFIC TRAIL
-app.get('/trails/:id', function(req, res) {
-    db.trail.findById(req.params.id).then(function(trails) {
-        res.render('trails/show', { trail: trails });
-    }).catch(function(err) {
-        res.send({ message: 'error', error: err });
-    });
-});
-
-app.get('/favorites', isLoggedIn, function(req,res) {
-  res.render('favorites/index');
-});
-
-
-app.post('/favorites/:title', isLoggedIn, function(req,res) {
-    db.favoriteTrail.findOrCreate({
-    where:  {
-        userId: req.user.id,
-        title: req.params.title
-      }
-    }).spread(function(favorite) {
-        res.render('favorites/index');
-    });
-});
 
 app.use('/auth', require('./controllers/auth'));
+app.use('/favorite-trails', require('./controllers/favorite-trails'));
+app.use('/trails', require('./controllers/trails'));
 
 var server = app.listen(process.env.PORT || 3000);
 
