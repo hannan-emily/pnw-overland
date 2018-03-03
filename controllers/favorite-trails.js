@@ -27,14 +27,17 @@ router.get('/', isLoggedIn, function(req,res) {
 //updating the note content that is in this row of the user's favorite model
 router.put('/:id/note', isLoggedIn, function(req,res) {
     console.log('we hit the router put route');
+    // get the user
     db.favoriteTrail.update({
       note: req.body.note
     }, {
-    where:  {
-      id: req.params.id
+      where: {
+        id: req.params.id
       }
-    }).then(function(note) {
-        // res.send(favorite);
+    }
+).then(function(note) {
+      console.log(note);
+        req.method('GET');
         res.redirect('/favorite-trails');
     });
 });
@@ -50,20 +53,19 @@ router.put('/:id/note', isLoggedIn, function(req,res) {
 // });
 
 router.get('/:id/:title', isLoggedIn, function(req,res) {
-    db.favoriteTrail.findOrCreate({
-    where:  {
-        userId: req.user.id,
-        trailId: req.params.id,
-        title: req.params.title
-      }
-    }).spread(function(favorite) {
-        // res.send(favorite);
-        res.redirect('/favorite-trails');
-    });
+  db.user.find({
+    where: {
+      id: req.user.id
+    }
+  }).then(function(user) {
+    user.createFavoriteTrail({
+      trailId: req.params.id,
+      title: req.params.title
+    }).then(function(data) {
+      console.log(data);
+    })
+  })
 });
-
-
-
 
 
 module.exports = router;

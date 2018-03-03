@@ -11,15 +11,14 @@ $(document).ready(function() {
   });
 
   $('.edit').on('click', function(e){
-    console.log("hit here")
+    console.log("hit the edit route in app.js")
     e.preventDefault();
     $.ajax({
-
       url: $(this).attr('href'),
       method: 'PUT',
       data: {note: $("#note").val()}
     }).done(function(data){
-      console.log('you finished put route in ajax');
+      console.log(data);
     });
   });
 });
