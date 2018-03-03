@@ -12,7 +12,7 @@ var geocoder = require('geocoder');
 var db = require('../models');
 var router = express.Router();
 
-
+//get route for all favorite trail for the logged in user
 router.get('/', isLoggedIn, function(req,res) {
   db.favoriteTrail.findAll({
     where: {
@@ -24,7 +24,7 @@ router.get('/', isLoggedIn, function(req,res) {
   });
 });
 
-//updating the note content that is in this row of the user's favorite model
+//updating the note content on one specific favorite trail
 router.put('/:id/note', isLoggedIn, function(req,res) {
     console.log('we hit the router put route');
     // get the user
@@ -42,16 +42,8 @@ router.put('/:id/note', isLoggedIn, function(req,res) {
     });
 });
 
-// router.delete('/:id', isLoggedIn, function(req, res) {
-//   db.favoriteTrail..destroy({
-//     where: {
-//       id: req.params.id
-//     }
-//   }).then(function(data) {
-//     res.send("");
-//   })
-// });
 
+//post route to create new favorite trail & add to user favorite list
 router.get('/:id/:title', isLoggedIn, function(req,res) {
   db.user.find({
     where: {
@@ -67,5 +59,27 @@ router.get('/:id/:title', isLoggedIn, function(req,res) {
   })
 });
 
+//getting specific id of one favorite trail of this user's list
+router.get('/:id', isLoggedIn, function(req,res) {
+  db.favoriteTrail.findAll({
+    where: {
+      userId: req.user.id
+    }
+  }).then(function() {
+
+  });
+});
+
+//deleting one specific favorite trail from this user's list
+router.delete('/:id', isLoggedIn, function(req, res) {
+  console.log('hit the delete route');
+  db.favoriteTrail.destroy({
+    where: {
+      id: req.params.id
+    }
+  }).then(function() {
+    res.redirect('/favorite-trails');
+  })
+});
 
 module.exports = router;

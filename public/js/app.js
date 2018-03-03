@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
-  $('.delete').on('submit', function(e) {
+//delete one trail from this user's favorite list
+  $('.delete').on('click', function(e) {
     e.preventDefault();
     $.ajax({
       url: $(this).attr('href'),
@@ -10,6 +11,7 @@ $(document).ready(function() {
     })
   });
 
+//update the note content on a specific favorite trail
   $('.edit').on('click', function(e){
     console.log("hit the edit route in app.js")
     e.preventDefault();
@@ -19,6 +21,7 @@ $(document).ready(function() {
       data: {note: $("#note").val()}
     }).done(function(data){
       console.log(data);
+      location.reload();
     });
   });
 });
