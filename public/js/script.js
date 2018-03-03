@@ -116,7 +116,7 @@ function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 14,
       center: start,
-      mapTypeId: 'satellite',
+      mapTypeId: 'hybrid',
       gestureHandling: 'cooperative' //this should in theory fix the zoom/scroll feature when we scroll down the page
     });
 

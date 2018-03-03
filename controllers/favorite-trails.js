@@ -39,6 +39,16 @@ router.put('/:id/note', isLoggedIn, function(req,res) {
     });
 });
 
+// router.delete('/:id', isLoggedIn, function(req, res) {
+//   db.favoriteTrail..destroy({
+//     where: {
+//       id: req.params.id
+//     }
+//   }).then(function(data) {
+//     res.send("");
+//   })
+// });
+
 router.get('/:id/:title', isLoggedIn, function(req,res) {
     db.favoriteTrail.findOrCreate({
     where:  {
