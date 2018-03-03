@@ -25,14 +25,15 @@ router.get('/', isLoggedIn, function(req,res) {
 });
 
 //updating the note content on one specific favorite trail
-router.put('/:id/note', isLoggedIn, function(req,res) {
+//identifying WHICH favorite trail by 'trailId'
+router.put('/:trailId/note', isLoggedIn, function(req,res) {
     console.log('we hit the router put route');
     // get the user
     db.favoriteTrail.update({
       note: req.body.note
     }, {
       where: {
-        id: req.params.id
+        trailId: req.params.trailId
       }
     }
 ).then(function(note) {
@@ -44,6 +45,7 @@ router.put('/:id/note', isLoggedIn, function(req,res) {
 
 
 //post route to create new favorite trail & add to user favorite list
+//this get route id matches the user id db request
 router.get('/:id/:title', isLoggedIn, function(req,res) {
   db.user.find({
     where: {

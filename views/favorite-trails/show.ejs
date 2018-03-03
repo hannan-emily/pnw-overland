@@ -11,18 +11,18 @@
 
 <div id="noteModal" class="modal">
     <div class="modal-content">
-      <form action="/favorite-trails/<%= favorite.id %>/note">
+      <form action="/favorite-trails/<%= favorite.trailId %>/note">
 
             <div class="form-group">
               <label for="note">note</label>
-              <input type="text" class="form-control" id="note" name="note" value="<%= favorite.id.note %>">
+              <input type="text" class="form-control" id="note" name="note" value="<%= favorite.trailId.note %>">
             </div>
 
     </div>
 
         <div class="modal-footer">
-          <a href="/favorite-trails/<%= favorite.id %>/note" class="modal-action modal-close waves-effect waves-green btn-flat edit">Add Note</a>
-          <a href="/favorite-trails/<%= favorite.id %>/note" class="modal-action modal-close waves-effect waves-green btn-flat edit">Edit Note</a>
+          <a href="/favorite-trails/<%= favorite.trailId %>/note" class="modal-action modal-close waves-effect waves-green btn-flat edit">Add Note</a>
+          <a href="/favorite-trails/<%= favorite.trailId %>/note" class="modal-action modal-close waves-effect waves-green btn-flat edit">Edit Note</a>
         </div>
 
     </form>
