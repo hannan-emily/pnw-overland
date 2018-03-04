@@ -36,17 +36,30 @@ h3 {
   font-size: 16px;
 }
 
+.header-overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: black;
+  opacity: 0.5;
+  z-index: 2;
+}
+
 .header-text {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 3;
 }
 
 .header-video-text {
   position: relative;
   max-height:600px;
   overflow: hidden;
+  z-index: 1;
 }
 
 .trailtext p{
