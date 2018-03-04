@@ -78,3 +78,8 @@ h3 {
   font-weight: bold;
   font-size: 20px;
 }
+
+
+.trail-video{
+  clip-path: inset(100px 100px 100px 100px) !important;
+}
