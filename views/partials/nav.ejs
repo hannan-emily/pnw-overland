@@ -1,28 +1,33 @@
-<nav class>
+<nav class="nav">
     <div class="nav-wrapper container">
-      <ul class="right hide-on-med-and-down">
-        <% if (currentUser !== undefined) { %>
-          <li><a href="/">Home</a></li>
-          <li><a href="/trails">Trails</a></li>
-          <li><a href="/favorite-trails">Favorites</a></li>
-          <li><a href="/profile">Profile</a></li>
-          <li><a href="/auth/logout">Logout</a></li>
+      <% if (currentUser !== undefined) { %>
+      <ul class="right hide-on-med-and-down nav-ul">
+          <li class="black-text"><a href="/">HOME/a></li>
+          <li><a href="/trails">TRAILS</a></li>
+          <li><a href="/favorite-trails">YOUR FAVORITES</a></li>
+      </ul>
+      <ul class="left hide-on-med-and-down">
+          <li><a href="/auth/logout">LOGOUT</a></li>
+      </ul>
       <%  } else { %>
-          <li><a href="/">Home</a></li>
-          <li><a href="/trails">Trails</a></li>
-          <li><a href="/auth/signup">Signup</a></li>
-          <li><a href="/auth/login">Login</a></li>
+      <ul class="right hide-on-med-and-down">
+          <li><a href="/">HOME</a></li>
+          <li><a href="/trails">TRAILS</a></li>
+      </ul>
+      <ul class="left hide-on-med-and-down">
+          <li><a href="/auth/signup">SIGNUP</a></li>
+          <li><a href="/auth/login">LOGIN</a></li>
       <%  } %>
       </ul>
 
+
       <ul id="nav-mobile" class="side-nav">
-        <li><a href="/">Home</a></li>
-        <li><a href="/trails">Trails</a></li>
-        <li><a href="/favorite-trails">Favorites</a></li>
-        <li><a href="/profile">Profile</a></li>
-        <li><a href="/auth/signup">Signup</a></li>
-        <li><a href="/auth/login">Login</a></li>
-        <li><a href="/auth/logout">Logout</a></li>
+        <li><a href="/">HOME</a></li>
+        <li><a href="/trails">TRAILS</a></li>
+        <li><a href="/favorite-trails">YOUR FAVORITES</a></li>
+        <li><a href="/auth/signup">SIGNUP</a></li>
+        <li><a href="/auth/login">LOGIN</a></li>
+        <li><a href="/auth/logout">LOGOUT</a></li>
         <!-- Dropdown Trigger -->
         <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Login In<i class="material-icons right">arrow_drop_down</i></a></li>
       </ul>

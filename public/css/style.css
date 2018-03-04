@@ -36,6 +36,13 @@ h3 {
   font-size: 16px;
 }
 
+.nav {
+  background-color: #192324!important;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  font-size: 50px !important;
+}
+
 .header-overlay {
   height: 100%;
   width: 100%;

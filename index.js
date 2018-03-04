@@ -37,13 +37,22 @@ app.use(function(req, res, next) {
   next();
 });
 
+// app.get('/', function(req, res) {
+//   res.render('index');
+// });
+
+//DISPLAY ALL TRAILS
 app.get('/', function(req, res) {
-  res.render('index');
+    db.trail.findAll().then(function(trails) {
+        res.render('index', { trail: trails });
+    }).catch(function(err) {
+        res.send({ message: 'error', error: err });
+    });
 });
 
-app.get('/profile', isLoggedIn, function(req, res) {
-  res.render('profile');
-});
+// app.get('/profile', isLoggedIn, function(req, res) {
+//   res.render('profile');
+// });
 
 
 app.use('/auth', require('./controllers/auth'));

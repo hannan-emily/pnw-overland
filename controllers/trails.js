@@ -12,7 +12,7 @@ var geocoder = require('geocoder');
 var db = require('../models');
 var router = express.Router();
 
-//DISPLAY ALL TRAILS ON ONE PAGE, AFTER THIS REQUEST
+//DISPLAY ALL TRAILS
 router.get('/', function(req, res) {
     db.trail.findAll().then(function(trails) {
         res.render('trails/index', { trail: trails });
