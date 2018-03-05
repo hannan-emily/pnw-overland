@@ -72,6 +72,8 @@ router.get('/:id', isLoggedIn, function(req,res) {
   });
 });
 
+
+
 //deleting one specific favorite trail from this user's list
 router.delete('/:id', isLoggedIn, function(req, res) {
   console.log('hit the delete route');

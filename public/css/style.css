@@ -1,7 +1,11 @@
-html {
-    font-family: 'News Cycle', sans-serif;
+html, body {
+  font-family: 'News Cycle', sans-serif;
+
 }
 
+body {
+  overflow-x: hidden;
+}
 
 #map {
   height: 360px;
@@ -17,9 +21,14 @@ html {
 h1 {
   font-family: 'Oswald', sans-serif;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 50px;
   padding-bottom: 0px;
   margin-bottom: 0px;
+}
+
+.h1-uppercase {
+  font-size: 40px;
+  text-transform: uppercase;
 }
 
 h2 {
@@ -34,6 +43,10 @@ h3 {
   font-family: 'Oswald', sans-serif;
   font-weight: 300;
   font-size: 16px;
+}
+
+h4 {
+  font-size: 18px;
 }
 
 .nav {
@@ -69,6 +82,15 @@ h3 {
   z-index: 1;
 }
 
+.trail-start-text {
+  margin: 0px;
+  padding: 0px;
+}
+
+.trail-text-row {
+  margin-top: 15%;
+}
+
 .trailtext p{
    display: inline-block;
    font-size: 18px;
@@ -79,7 +101,14 @@ h3 {
   font-size: 20px;
 }
 
+.trail-video {
+  clip-path: inset(0px 0px 0px 0px);
+}
 
-.trail-video{
-  clip-path: inset(100px 100px 100px 100px) !important;
+.trail-video-player {
+   transform: translateX(-25%);
+}
+
+.trail-go-icon {
+  margin-top: 10%;
 }
