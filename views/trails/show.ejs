@@ -1,15 +1,16 @@
 
 <main>
 
-  <div class='row'>
+  <div class='row left-align trail-main-content'>
 
-    <div id="responsive-video" class="col s6">
-      <iframe id="ytplayer" type="text/html" width="650" height="366"
+    <div class="col s6 trail-main-video">
+      <iframe class="responsive-video" id="ytplayer" type="text/html" width="750" height="420"
       src="<%= trail.video %>"
       frameborder="0" allowfullscreen></iframe>
     </div>
 
-    <div id="videoheader" class="col s6 left-align trailtext">
+
+    <div class="col s6 left-align trailtext trail-content">
       <h1><%= trail.title %></h1>
       <h2><%= trail.subtitle %></h2>
       <div class="row">
@@ -32,10 +33,11 @@
       </div>
 
     </div>
+</div>
 
+<div class="row">
     <div id="map" class="col s12"></div>
-  </div>
-
+</div>
 
 
   <script>

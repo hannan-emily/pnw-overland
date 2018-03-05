@@ -101,6 +101,11 @@ h4 {
   z-index: 1;
 }
 
+.trail-content {
+  overflow: scroll;
+  max-height: 338px;
+}
+
 .trail-start-text {
   margin: 0px;
   padding: 0px;
@@ -113,6 +118,7 @@ h4 {
 .trailtext p{
    display: inline-block;
    font-size: 18px;
+
 }
 
 .trailtextbold {
@@ -122,6 +128,12 @@ h4 {
 
 .trail-video {
   clip-path: inset(0px 0px 0px 0px);
+}
+
+.trail-video-main {
+  max-width: 100%;
+  overflow: hidden;
+
 }
 
 .trail-video-player {
@@ -156,6 +168,16 @@ h4 {
   clip-path: inset(0% 0% 10% 0%);
 }
 
+.trail-main-video {
+  clip-path: inset(10% 0% 0% 0%);
+  /* transform: translateY(-50%); */
+
+}
+
+.trail-main-content {
+  max-height: 350px;
+  margin-top: 0px;
+}
 
 .img-text {
   margin: 0px;
@@ -168,7 +190,7 @@ h4 {
 }
 
 #map {
-  height: 360px;
+  height: 300px;
   padding: 0px;
   margin: 0px;
 }

@@ -23,7 +23,8 @@
 <div class="row">
   <% trail.forEach(function(trail) { %>
     <div class="row trail-video-row">
-        <div class="col s4 left-align">
+
+      <div class="col s4 left-align">
         <iframe class="col s12"
             width="500"
             height="563"
@@ -34,6 +35,7 @@
             &maptype=satellite" allowfullscreen>
         </iframe>
       </div>
+
       <div class="col s4 center-align">
         <div class="row trail-text-row">
           <p class="trail-start-text grey-text text-darken-1 right-align col s4">TRAIL START</p>
@@ -45,11 +47,13 @@
         <h4><%= trail.subtitle %></h4>
         <a href="/trails/<%= trail.id %>"><img class="trail-go-icon" src="../img/icon-go.png" alt="go icon"></a>
       </div>
+
       <div id="responsive-video" class="trail-video left-align col s4">
           <iframe id="ytplayer" class="trail-video-player" type="text/html" width="1000" height="563"
           src="<%= trail.video %>&controls=0"
           frameborder="0" allowfullscreen></iframe>
       </div>
+
     </div>
   <% }); %>
 </div>
