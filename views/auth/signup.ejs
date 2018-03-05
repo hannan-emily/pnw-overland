@@ -1,18 +1,39 @@
-<form action="/auth/signup" method="POST">
-  <div class="form-group">
-    <label for="authEmail">Email</label>
-    <input id="authEmail" class="form-control" type="email" name="email">
+
+
+<div class="row valign-wrapper">
+
+  <div class="col s6">
+
+    <h1 class="h1-uppercase grey-text text-darken-3 col s12 left-align">SIGNUP</h1>
+
+    <div class="col s12 h2">
+      <form action="/auth/signup" method="POST">
+        <div class="form-group">
+          <label class="h2" for="authEmail">Email</label>
+          <input class="h2" id="authEmail" class="form-control" type="email" name="email">
+        </div>
+
+        <div class="form-group">
+          <label class="h2" for="authName">Name</label>
+          <input class="h2" id="authName" class="form-control" type="text" name="name">
+        </div>
+
+        <div class="form-group">
+          <label class="h2" for="authPassword">Password</label>
+          <input class="h2" id="authPassword" class="form-control" type="password" name="password">
+        </div>
+
+        <input class="btn btn-favorite" type="submit">
+      </form>
+    </div>
+
   </div>
 
-  <div class="form-group">
-    <label for="authName">Name</label>
-    <input id="authName" class="form-control" type="text" name="name">
+  <div id="responsive-video" class="trail-video left-align col s6">
+    <iframe class="trail-video-player" width="1440" height="810" src="https://www.youtube.com/embed/KqTP5yqcb0U?rel=0&amp;controls=0&amp;showinfo=0&autoplay=1&loop=1&mute=1"
+    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+    </iframe>
   </div>
 
-  <div class="form-group">
-    <label for="authPassword">Password</label>
-    <input id="authPassword" class="form-control" type="password" name="password">
-  </div>
 
-  <input class="btn btn-primary" type="submit">
-</form>
+</div>
