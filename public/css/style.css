@@ -180,13 +180,13 @@ h4 {
 
 .trail-main-video {
   clip-path: inset(5% 0% 0% 0%);
-  /* transform: translateY(-50%); */
 
 }
 
 .trail-main-content {
   max-height: 350px;
   margin-top: 0px;
+  overflow: scroll;
 }
 
 .img-text {
@@ -195,8 +195,12 @@ h4 {
   font-size: 13px;
 }
 
+.note-form {
+  margin: 0px;
+}
+
 #login-signup {
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 #map {

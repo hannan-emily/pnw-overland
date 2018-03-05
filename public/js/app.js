@@ -25,6 +25,22 @@ $(document).ready(function() {
     });
   });
 });
+
+	$('.edit-user').submit(function(e) {
+		e.preventDefault();
+		$.ajax({
+			url: $(this).attr('action'),
+			method: "PUT",
+			data: {
+				name: $('#name').val(),
+				bio: $('#bio').val()
+			}
+		}).done(function(data) {
+			console.log(data);
+			window.location.href = '/profile';
+		});
+	});
+
 //
 // $('.put-form').on('submit', function(e) {
 //   e.preventDefault();

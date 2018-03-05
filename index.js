@@ -50,9 +50,11 @@ app.get('/', function(req, res) {
     });
 });
 
-// app.get('/profile', isLoggedIn, function(req, res) {
-//   res.render('profile');
-// });
+
+//DISPLAY USER PROFILE
+app.get('/profile', isLoggedIn, function(req, res) {
+  res.render('profile/edit');
+});
 
 
 app.use('/auth', require('./controllers/auth'));

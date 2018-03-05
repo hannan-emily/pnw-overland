@@ -12,13 +12,30 @@ var geocoder = require('geocoder');
 var db = require('../models');
 var router = express.Router();
 
-//POST N0TE TO THIS TRAIL
-// router.post('/:id', function(req,res) {
-// db.trail.findById(req.params.id).then(function(trail) {
-//     trail.createNote({
-//       content: req.body.content
-//     }).then(function(note) {
-//       console.log(post.get());
+
+
+// POST N0TE TO THIS TRAIL
+router.post('/:id', function(req,res) {
+  db.trail.findById(req.params.id) //find the associated post by id number
+  .then(function(trail) {
+    trail.createNote({
+      content: req.body.content
+    }).then(function(note) {
+      res.redirect('/trails/' + req.params.id);
+    });
+  });
+});
+//
+// router.post('/:id', function(req,res) { //creating a new comment
+//   db.post.find({
+//     where: { id: req.body.postId } //find the associated post by id number
+//   }).then(function(post) { //using that author, add THIS post to THIS author in the author database
+//     //format =  table.createModel()
+//       post.createComment({
+//       name: req.body.name, //loading data from our form input fields
+//       content: req.body.content //loading data from our form input fields
+//     }).then(function(comment) { //load child
+//       res.redirect('/posts/' + req.params.id); //send comment
 //     });
 //   });
 // });
