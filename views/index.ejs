@@ -18,39 +18,27 @@
 
   <% trail.forEach(function(trail) { %>
     <div class="row trail-video-row">
-
-      <div class="col s4 left-align map-responsive">
-        <iframe
-          width="500"
-          height="563"
-          frameborder="0" style="border:0"
-          src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyAtGxkzysphum6bTjgJD83_PWVDhxcOq00
-          &origin=<%= trail.startLat %>,<%= trail.startLng %>
-          &destination=<%= trail.endLat %>,<%= trail.endLng %>
-          &maptype=satellite"
-            allowfullscreen>
-        </iframe>
+      <div class="col s4 center-align">
       </div>
-
-      <div id="trail-content" class="col s4 center-align">
+      <div class="col s4 center-align">
         <div class="row trail-text-row">
           <p class="trail-start-text grey-text text-darken-1 right-align col s4">TRAIL START</p>
           <p class="trail-start-text grey-text text-darken-1 left-align col s8"><%= trail.startLat %>° lat, <%= trail.startLng %>° lng</p>
           <p class="trail-start-text grey-text text-darken-1 right-align col s4">TRAIL END</p>
           <p class="trail-start-text grey-text text-darken-1 left-align col s8"><%= trail.endLat %>° lat, <%= trail.endLng %>° lng</p>
         </div>
-        <h1 class="h1-uppercase grey-text text-darken-3"><%= trail.title %></h1>
-        <h4 class="trail-subtitle-text"><%= trail.subtitle %></h4>
+        <h1 class="h1-uppercase grey-text text-darken-3" ><%= trail.title %></h1>
+        <h4><%= trail.subtitle %></h4>
         <a href="/trails/<%= trail.id %>"><img class="trail-go-icon" src="../img/icon-go.png" alt="go icon"></a>
       </div>
-
       <div id="responsive-video" class="trail-video left-align col s4">
           <iframe id="ytplayer" class="trail-video-player" type="text/html" width="1000" height="563"
           src="<%= trail.video %>&controls=0"
           frameborder="0" allowfullscreen></iframe>
       </div>
-
     </div>
   <% }); %>
+
+
 
 </main>
