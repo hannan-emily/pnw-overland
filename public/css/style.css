@@ -112,3 +112,19 @@ h4 {
 .trail-go-icon {
   margin-top: 10%;
 }
+
+.btn-source {
+  background-color: white;
+  border: 1px solid #293E41;
+  color: #293E41;
+}
+
+.btn-favorite {
+  background-color: #293E41;
+}
+
+.btn:hover {
+  background-color: #ff2130;
+  color: white;
+  border: none;
+}

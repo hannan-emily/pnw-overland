@@ -22,12 +22,12 @@
             <p><%= trail.endLat %> lat , <%= trail.endLng %> lng </p>
         </div>
         <div class="col s6 trailtext">
-            <p class="trailtextbold">More tips for <%= trail.title %></p>
-            <a class="waves-effect waves-light btn" href="<%= trail.sourceURL %>" target="_blank">Read More</a>
+            <p class="trailtextbold">Source Guide for <%= trail.title %></p>
+            <a class="btn btn-source" href="<%= trail.sourceURL %>" target="_blank">READ MORE</a>
         </div>
         <div class="col s6">
           <p class="trailtextbold">Add trail to your favorites!</p>
-          <a class="waves-effect waves-light btn" href="/favorite-trails/<%= trail.id %>/<%= trail.title %>"><i class="material-icons left">favorites</i>Favorite</a>
+          <a class="btn btn-favorite" href="/favorite-trails/<%= trail.id %>/<%= trail.title %>"><i class="material-icons left">favorites</i>FAVORITE</a>
         </div>
       </div>
 
