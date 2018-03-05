@@ -20,7 +20,7 @@ router.post('/signup', function(req,res) {
       console.log('user created by hitting this route');
       passport.authenticate('local', {
         successRedirect: '/',
-        successFlash: 'account created and logged in. yay!'
+        // successFlash: 'account created and logged in. yay!'
       })(req, res); //we're defining & immediatly calling a NEW FUNCTION
     } else {
       //email already exists in the db
@@ -41,7 +41,7 @@ router.get('/login', function(req, res) {
 
 router.post('/login', passport.authenticate('local', {
   successRedirect: '/',
-  successFlash: 'you have logged in',
+  // successFlash: 'you have logged in',
   failureRedirect: '/auth/login',
   failureFlash: 'invalid username and/or password'
 }));
