@@ -106,5 +106,6 @@ Google Maps Embed API: https://developers.google.com/maps/documentation/embed/
 - Embedded maps on the landing page could't use the API, so the overlay and info windows I couldn't hide.
 
 ## Next Steps
-
+- There are currently two edit routes that do not successfully work
+- The delete route has an issue
 - Add in a separate model for markers along each route. Currently only the Boston Bar route has waypoint markers with additional information and an additional video.This would have a 1:M association to the main Trails model.

@@ -67,7 +67,7 @@ router.get('/:id/:title', isLoggedIn, function(req,res) {
 router.get('/:id', isLoggedIn, function(req,res) {
   db.favoriteTrail.findAll({
     where: {
-      id: req.body.id
+      id: req.params.id
     }
   }).then(function() {
     res.redirect('/favorite-trails');
