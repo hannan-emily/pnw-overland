@@ -7,6 +7,11 @@ body {
   overflow-x: hidden;
 }
 
+form {
+  margin-top: 10%;
+}
+
+
 #map {
   height: 360px;
   padding: 0px;
@@ -39,6 +44,15 @@ h2 {
   margin-top: 0px;
 }
 
+.h2 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    padding-top: 0px;
+    margin-top: 0px;
+    color: black;
+}
+
 h3 {
   font-family: 'Oswald', sans-serif;
   font-weight: 300;
@@ -49,12 +63,14 @@ h4 {
   font-size: 18px;
 }
 
+
 .nav {
   background-color: #192324!important;
   font-family: 'Oswald', sans-serif;
   font-weight: 300;
-  font-size: 50px !important;
+  font-size: 120% !important;
 }
+
 
 .header-overlay {
   height: 100%;
@@ -127,4 +143,8 @@ h4 {
   background-color: #ff2130;
   color: white;
   border: none;
+}
+
+.label-text {
+  font-size: 22px !important;
 }
