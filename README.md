@@ -49,21 +49,21 @@ Materialize
 
 ### Home Page
 
-![alt text](/public/img/home-page.png "Home")
+![alt text](/public/img/screenshots/wireframe-home.png "Home")
 
-The homepage will serve to welcome visitors to the site as well as show a picture demo of what the site can do.
 
-### Profile Page
+### Trail Single Page
 
-![alt text](/public/img/portfolio-page.png "Portfolio")
+![alt text](/public/img/screenshots/wireframe-trail-single.png "Portfolio")
 
-The "profile" or portfolio page is the users main dashboard for displaying all created spaces.
+### Favorites Page
 
-### Show Page
+![alt text](/public/img/screenshots/wireframe-favorties.png "Home")
 
-![alt text](/public/img/show-page.png "Show")
 
-The "show" page is the individual showcase page for each created space. This is where the color palate is on display, along with notes and color values.
+### Login Page
+
+![alt text](/public/img/screenshots/wireframe-home.png "Home")
 
 
 ## Routes
