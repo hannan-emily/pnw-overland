@@ -54,16 +54,16 @@ Materialize
 
 ### Trail Single Page
 
-![alt text](/public/img/screenshots/wireframe-trail-single.png "Portfolio")
+![alt text](/public/img/screenshots/wireframe-trail-single.png "Trail Single")
 
 ### Favorites Page
 
-![alt text](/public/img/screenshots/wireframe-favorites.png "Home")
+![alt text](/public/img/screenshots/wireframe-favorites.png "Favorites")
 
 
 ### Login Page
 
-![alt text](/public/img/screenshots/wireframe-login.png "Home")
+![alt text](/public/img/screenshots/wireframe-login.png "Login")
 
 
 ## Routes
