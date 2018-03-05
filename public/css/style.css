@@ -11,14 +11,7 @@ form {
   margin-top: 10%;
 }
 
-
-#map {
-  height: 360px;
-  padding: 0px;
-  margin: 0px;
-}
-
-#video {
+thead {
   padding: 0px;
   margin: 0px;
 }
@@ -34,6 +27,10 @@ h1 {
 .h1-uppercase {
   font-size: 40px;
   text-transform: uppercase;
+}
+
+.h1-favorite {
+  margin-bottom: 5%;
 }
 
 h2 {
@@ -63,6 +60,12 @@ h4 {
   font-size: 18px;
 }
 
+/* changing table row height */
+.row-content {
+  height: 100px;
+  overflow: scroll;
+  margin-bottom: 5%;
+}
 
 .nav {
   background-color: #192324!important;
@@ -136,7 +139,7 @@ h4 {
 }
 
 .btn-favorite {
-  background-color: #293E41;
+  background-color: #293E41 important!;
 }
 
 .btn:hover {
@@ -149,10 +152,28 @@ h4 {
   font-size: 22px !important;
 }
 
+.login-signup-video {
+  clip-path: inset(0% 0% 10% 0%);
+}
+
+
+.img-text {
+  margin: 0px;
+  padding: 0px;
+  font-size: 13px;
+}
+
 #login-signup {
   overflow-y: hidden;
 }
 
-.login-signup-video {
-  clip-path: inset(0% 0% 10% 0%);
+#map {
+  height: 360px;
+  padding: 0px;
+  margin: 0px;
+}
+
+#video {
+  padding: 0px;
+  margin: 0px;
 }
