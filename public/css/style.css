@@ -148,3 +148,11 @@ h4 {
 .label-text {
   font-size: 22px !important;
 }
+
+#login-signup {
+  overflow-y: hidden;
+}
+
+.login-signup-video {
+  clip-path: inset(0% 0% 10% 0%);
+}
