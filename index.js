@@ -51,15 +51,10 @@ app.get('/', function(req, res) {
 });
 
 
-//DISPLAY USER PROFILE
-app.get('/profile', isLoggedIn, function(req, res) {
-  res.render('profile/edit');
-});
-
-
 app.use('/auth', require('./controllers/auth'));
 app.use('/favorite-trails', require('./controllers/favorite-trails'));
 app.use('/trails', require('./controllers/trails'));
+app.use('/profile', require('./controllers/profile'));
 
 var server = app.listen(process.env.PORT || 3000);
 

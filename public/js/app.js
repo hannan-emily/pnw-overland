@@ -11,20 +11,20 @@ $(document).ready(function() {
     })
   });
 
-//update the note content on a specific favorite trail
-  $('.edit').on('click', function(e){
-    console.log("hit the edit route in app.js")
-    e.preventDefault();
-    $.ajax({
-      url: $(this).attr('href'),
-      method: 'PUT',
-      data: {note: $("#note").val()}
-    }).done(function(data){
-      console.log(data);
-      location.reload();
-    });
-  });
-});
+// //update the note content on a specific favorite trail
+//   $('.edit').on('click', function(e){
+//     console.log("hit the edit route in app.js")
+//     e.preventDefault();
+//     $.ajax({
+//       url: $(this).attr('href'),
+//       method: 'PUT',
+//       data: {note: $("#note").val()}
+//     }).done(function(data){
+//       console.log(data);
+//       location.reload();
+//     });
+//   });
+// });
 
 	$('.edit-user').submit(function(e) {
 		e.preventDefault();
@@ -32,8 +32,9 @@ $(document).ready(function() {
 			url: $(this).attr('action'),
 			method: "PUT",
 			data: {
-				name: $('#name').val(),
-				bio: $('#bio').val()
+				name: $('#authName').val(),
+        email: $('#authEmail').val(),
+        password: $('#authEmailpassword').val()
 			}
 		}).done(function(data) {
 			console.log(data);

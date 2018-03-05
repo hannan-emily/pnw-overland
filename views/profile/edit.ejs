@@ -5,15 +5,15 @@
     <h1 class="h1-uppercase grey-text text-darken-3 col s12 left-align">Update your profile,&ensp;<%= currentUser.name %>?</h1>
 
     <div class="col s12 h2">
-      <form action="/user/signup" method="POST">
+      <form action="/profile/edit" class="edit-user" method="POST">
         <div class="form-group">
           <label class="h2" for="authEmail">Email</label>
-          <input class="h2" id="authEmail" class="form-control" type="email" name="email">
+          <input class="h2" id="authEmail" class="form-control" type="email" name="email" value='<%= currentUser.email %>'>
         </div>
 
         <div class="form-group">
           <label class="h2" for="authName">Name</label>
-          <input class="h2" id="authName" class="form-control" type="text" name="name">
+          <input class="h2" id="authName" class="form-control" type="text" name="name" value='<%= currentUser.name %>'>
         </div>
 
         <div class="form-group">
@@ -25,6 +25,7 @@
       </form>
     </div>
 
+
   </div>
 
   <div id="responsive-video" class="login-signup-video left-align col s6">
@@ -35,3 +36,5 @@
 
 
 </div>
+
+<script src="/js/app.js"></script>
