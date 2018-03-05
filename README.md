@@ -58,12 +58,12 @@ Materialize
 
 ### Favorites Page
 
-![alt text](/public/img/screenshots/wireframe-favorties.png "Home")
+![alt text](/public/img/screenshots/wireframe-favorites.png "Home")
 
 
 ### Login Page
 
-![alt text](/public/img/screenshots/wireframe-home.png "Home")
+![alt text](/public/img/screenshots/wireframe-login.png "Home")
 
 
 ## Routes
@@ -85,7 +85,7 @@ Associations : Has many FavoriteTrails
 
 Associations : Belongs to one User
 
-![alt text](/public/img/screenshots/model-notes.png "Notes)
+![alt text](/public/img/screenshots/model-notes.png "Notes")
 
 Associations : Belongs to one Trail
 
