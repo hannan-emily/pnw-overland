@@ -40,35 +40,7 @@
 
 
 </div>
-    <% favoritesObject.forEach(function(favorite) { %>
-<div class="row"
-        <li>
-          <%= favorite.title %>
-          <%= favorite.note %>
-          <a class="waves-effect waves-light btn modal-trigger" href="#noteModal">Add Note</a>
-          <a class="waves-effect  btn-flat delete" href="/favorite-trails/<%= favorite.id %>">Delete</a>
-        </li>
-
-  <div id="noteModal" class="modal">
-      <div class="modal-content">
-        <form action="/favorite-trails/<%= favorite.trailId %>/note">
-
-              <div class="form-group">
-                <label for="note">note</label>
-                <input type="text" class="form-control" id="note" name="note" value="<%= favorite.trailId.note %>">
-              </div>
-
-      </div>
-
-          <div class="modal-footer">
-            <a href="/favorite-trails/<%= favorite.trailId %>/note" class="modal-action modal-close waves-effect waves-green btn-flat edit">Add Note</a>
-            <a href="/favorite-trails/<%= favorite.trailId %>/note" class="modal-action modal-close waves-effect waves-green btn-flat edit">Edit Note</a>
-          </div>
-
-      </form>
-    </div>
-</div>
-  <% }); %>
+  
 
 </main>
 
