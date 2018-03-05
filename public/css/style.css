@@ -68,7 +68,7 @@ h4 {
 
 /* changing table row height */
 .row-content {
-  height: 100px;
+  height: 25px;
   overflow: scroll;
   margin-bottom: 5%;
 }

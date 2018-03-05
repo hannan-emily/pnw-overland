@@ -24,6 +24,17 @@
           <a class="col s5 btn btn-favorite" href="/favorite-trails/<%= trail.id %>/<%= trail.title %>"><i class="material-icons left">favorites</i>ADD TO FAVORITES</a>
       </div>
 
+      <div class="row left-align">
+        <form method='POST' action='/trails/<%= trail.id %>'>
+          <input type='text' name='note' placeholder="Add a note to this trail">
+          <input type='hidden' name='trailId' value='<%= trail.id %>'>
+          <input type='submit' value='Add Note'>
+        </form>
+      </div>
+
+      <div class="row left-align">
+
+      </div>
 
     </div>
 

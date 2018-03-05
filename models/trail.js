@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
     sourceURL: DataTypes.STRING
   }, {});
   trail.associate = function(models) {
-    // associations can be defined here
+    models.trail.hasMany(models.note);
   };
   return trail;
 };

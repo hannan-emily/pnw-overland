@@ -44,6 +44,8 @@ router.put('/:trailId/note', isLoggedIn, function(req,res) {
 });
 
 
+
+
 //post route to create new favorite trail & add to user favorite list
 //this get route id matches the user id db request
 router.get('/:id/:title', isLoggedIn, function(req,res) {

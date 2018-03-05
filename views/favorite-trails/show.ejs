@@ -6,7 +6,7 @@
 
 
 
-    <div class="col s8">
+    <div class="col s6">
       <div class="h1-uppercase h1-favorite grey-text text-darken-1 left-align">
         <h1>Welcome&ensp;<%= currentUser.name %>&ensp;to your favorite trails</h1>
       </div>
@@ -14,7 +14,6 @@
               <thead>
                 <tr class="trailtextbold col s12">
                     <th class="col s4">FAVORITE TRAIL</th>
-                    <th class="col s4">NOTES</th>
                     <th class="col s4">ACTION</th>
                 </tr>
               </thead>
@@ -23,8 +22,7 @@
                 <% favoritesObject.forEach(function(favorite) { %>
                 <tr class="row-content col s12">
                   <td class="col s4"><%= favorite.title %></td>
-                  <td class="table-overflow-note col s4"><%= favorite.note %></td>
-                  <td class="col s4"><a class="btn-favorite delete" href="/favorite-trails/<%= favorite.id %>">DELETE FAVORITE</a></td>
+                  <td class="col s4"><a class="delete" href="/favorite-trails/<%= favorite.id %>">DELETE FAVORITE</a></td>
                 </tr>
                 <% }); %>
                 </tr>
@@ -32,12 +30,14 @@
             </table>
     </div>
 
-    <div class="col s4">
+    <div class="col s6">
       <img class="responsive-img" src="https://expeditionportal.com/media/2017/03/d2g_ARB_Grey_Creek_Pass-2-2000x1333.jpeg">
       <p class="img-text">Source: expeditionportal.com</p>
       <img class="responsive-img" src="https://expeditionportal.com/media/2017/03/d2g_ARB_Grey_Creek_Pass-10-2000x1333.jpeg">
       <p class="img-text">Source: expeditionportal.com</p>
     </div>
+
+
 
 </div>
     <% favoritesObject.forEach(function(favorite) { %>
