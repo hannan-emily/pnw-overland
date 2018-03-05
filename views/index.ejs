@@ -1,24 +1,36 @@
 <main>
 
-  <div id="index-banner" class="header-video-text">
-      <div class="header-text no-pad-bot">
-          <h1 class="header center white-text header-h1">PNW OVERLAND ADVENTURES</h1>
-          <div class="row center">
-            <h5 class="header col s12 white-text header-h5">Your interactive guide to backcountry road adventures in the Pacific Northwest</h5>
-          </div>
+  <div id="index-banner" class="header-video-text row">
+      <div class="col s12">
+        <div class="header-text no-pad-bot">
+            <h1 class="header center white-text header-h1">PNW OVERLAND ADVENTURES</h1>
+            <div class="row center">
+              <h5 class="header col s12 white-text header-h5">Your interactive guide to backcountry road adventures in the Pacific Northwest</h5>
+            </div>
+        </div>
       </div>
 
       <div class="header-overlay col s12">
       </div>
 
-      <div class="responsive-video col s12">
+      <div class="responsive-video">
         <iframe width="1440" height="810" src="https://www.youtube.com/embed/2xkkLLc3y5M?rel=0&amp;controls=0&amp;showinfo=0&autoplay=1&loop=1&mute=1&playlist=2xkkLLc3y5M" frameborder="0" allowfullscreen></iframe>
       </div>
   </div>
 
+  <div class="row">
   <% trail.forEach(function(trail) { %>
     <div class="row trail-video-row">
-      <div class="col s4 center-align">
+        <div class="col s4 left-align">
+        <iframe class="col s12"
+            width="500"
+            height="563"
+            frameborder="0" style="border:0"
+            src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyCbbvQGnmSQPlGEQqwB9aaJNAyfH72-DME
+            &origin=<%= trail.startLat %>, <%= trail.startLng %>
+            &destination=<%= trail.endLat %>, <%= trail.endLng %>
+            &maptype=satellite" allowfullscreen>
+        </iframe>
       </div>
       <div class="col s4 center-align">
         <div class="row trail-text-row">
@@ -38,7 +50,7 @@
       </div>
     </div>
   <% }); %>
-
+</div>
 
 
 </main>
