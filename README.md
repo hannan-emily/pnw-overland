@@ -1,4 +1,4 @@
-separate# PNW OVERLAND
+# PNW OVERLAND
 
 View live app here:  https://pnw-overland.herokuapp.com/
 
