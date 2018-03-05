@@ -40,10 +40,14 @@ Day 4 - Day 7
 
 Async
 Bcrypt
+CSS
 Express
 EJS
-Postgres Sequel
+HTML
 Materialize
+Node.js
+Postgres
+Sequel
 
 ## Wireframe Sketches
 
