@@ -19,15 +19,15 @@
               </thead>
 
               <tbody>
-                <% favoritesObject.forEach(function(favorite) { %>
+                <% favorites.forEach(function(favorite) { %>
                 <tr class="row-content col s12">
                   <td class="col s4"><%= favorite.title %></td>
-                  <td class="col s4"><a class="delete" href="/favorite-trails/<%= favorite.id %>">DELETE FAVORITE</a></td>
-                </tr>
+                  <td class="col s4"><a class="delete btn" href="/favorite-trails/<%= favorite.id %>">DELETE FAVORITE</a></td>
+
                 <% }); %>
                 </tr>
               </tbody>
-            </table>
+      </table>
     </div>
 
     <div class="col s6">
@@ -40,7 +40,7 @@
 
 
 </div>
-  
+
 
 </main>
 

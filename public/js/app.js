@@ -1,7 +1,9 @@
 $(document).ready(function() {
 
 //delete one trail from this user's favorite list
+//going back to basics to get the delete route to work
   $('.delete').on('click', function(e) {
+    console.log("clickd")
     e.preventDefault();
     $.ajax({
       url: $(this).attr('href'),
@@ -10,6 +12,7 @@ $(document).ready(function() {
       location.reload();
     })
   });
+
 
 // //update the note content on a specific favorite trail
 //   $('.edit').on('click', function(e){
@@ -36,12 +39,13 @@ $(document).ready(function() {
         email: $('#authEmail').val(),
         password: $('#authEmailpassword').val()
 			}
-		}).done(function(data) {
+		}).done(function(data){
 			console.log(data);
 			window.location.href = '/profile';
 		});
 	});
 
+})
 //
 // $('.put-form').on('submit', function(e) {
 //   e.preventDefault();
