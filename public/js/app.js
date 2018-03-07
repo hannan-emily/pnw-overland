@@ -3,7 +3,6 @@ $(document).ready(function() {
 //delete one trail from this user's favorite list
 //going back to basics to get the delete route to work
   $('.delete').on('click', function(e) {
-    console.log("clickd")
     e.preventDefault();
     $.ajax({
       url: $(this).attr('href'),

@@ -16,6 +16,12 @@ thead {
   margin: 0px;
 }
 
+/* modifying table row content */
+tr {
+  margin: 10px !important;
+  height: 50px !important;
+}
+
 h1 {
   font-family: 'Oswald', sans-serif;
   font-weight: 700;
@@ -64,13 +70,6 @@ h3 {
 
 h4 {
   font-size: 18px;
-}
-
-/* changing table row height */
-.row-content {
-  height: 25px;
-  overflow: scroll;
-  margin-bottom: 5%;
 }
 
 .nav {
@@ -162,6 +161,7 @@ h4 {
 
 .btn-favorite {
   background-color: #293E41 !important;
+  color: white;
 }
 
 .btn:hover {

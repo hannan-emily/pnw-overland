@@ -20,7 +20,6 @@ router.get('/', isLoggedIn, function(req,res) {
     }
   }).then(function(favorites) {
   res.render('favorite-trails/show', {favorites: favorites});
-  console.log(favorites)
   });
 });
 
@@ -37,7 +36,6 @@ router.put('/:trailId/note', isLoggedIn, function(req,res) {
       }
     }
 ).then(function(note) {
-      console.log(note);
         req.method('GET');
         res.redirect('/favorite-trails');
     });
@@ -58,7 +56,6 @@ router.get('/:id/:title', isLoggedIn, function(req,res) {
       trailId: req.params.id,
       title: req.params.title
     }).then(function(data) {
-      console.log(data);
     })
   })
 });
@@ -77,13 +74,11 @@ router.get('/:id', isLoggedIn, function(req,res) {
 
 //deleting one specific favorite trail from this user's list
 router.delete('/:id', isLoggedIn, function(req, res) {
-  
   db.favoriteTrail.destroy({
     where: {
       id: req.params.id
     }
-  }).then(function() {
-
+    }).then(function() {
   })
 });
 
