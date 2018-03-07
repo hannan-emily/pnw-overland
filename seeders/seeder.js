@@ -70,7 +70,14 @@ module.exports = {
     }], {});
   },
 
-
+  startLat: DataTypes.FLOAT,
+  startLng: DataTypes.FLOAT,
+  endLat: DataTypes.FLOAT,
+  endLng: DataTypes.FLOAT,
+  title: DataTypes.TEXT,
+  subtitle: DataTypes.TEXT,
+  video: DataTypes.STRING,
+  sourceURL: DataTypes.STRING
   down: function (queryInterface, Sequelize) {
     /*
       Add reverting commands here.
