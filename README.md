@@ -42,7 +42,7 @@ Day 4 - Day 7
 * Bcrypt
 * CSS
 * Express
-* EJS
+* EJS Layouts
 * HTML
 * Materialize
 * Node.js
