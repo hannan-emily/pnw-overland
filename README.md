@@ -38,16 +38,16 @@ Day 4 - Day 7
 
 ### Technologies
 
-Async
-Bcrypt
-CSS
-Express
-EJS
-HTML
-Materialize
-Node.js
-Postgres
-Sequel
+* Async
+* Bcrypt
+* CSS
+* Express
+* EJS
+* HTML
+* Materialize
+* Node.js
+* PostgreSQL
+
 
 ## Wireframe Sketches
 
@@ -107,5 +107,5 @@ Google Maps Embed API: https://developers.google.com/maps/documentation/embed/
 
 ## Next Steps
 - There are currently two edit routes that do not successfully work
-- ~~The delete route has an issue~~ Fixed 
+- ~~The delete route has an issue~~ Fixed
 - Add in a separate model for markers along each route. Currently only the Boston Bar route has waypoint markers with additional information and an additional video.This would have a 1:M association to the main Trails model.
